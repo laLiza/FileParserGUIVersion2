@@ -20,32 +20,11 @@ import javafx.stage.Stage;
 
 
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.VBox;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-import org.w3c.dom.Text;
-import java.io.File;
-import java.io.IOException;
+
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.application.Application;
-import static javafx.application.Application.launch;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
+
 
 
 public class HelloApplication extends Application {
@@ -63,6 +42,7 @@ public class HelloApplication extends Application {
         Button button1 = new Button("Select One File and Open");
 
         Button button2 = new Button("Start it !");
+        //Button button4 = new Button("Start ixkkt !");
 
         button1.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -81,40 +61,25 @@ public class HelloApplication extends Application {
                 }
             }
         });
+        Button saveButton = new Button("save");
 
-        final String sampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut \n"
-                + "labore et dolore magna aliqua.\n"
-                + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n"
-                + "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n"
-                + "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        //Creating a File chooser
+        FileChooser fileChooser1 = new FileChooser();
+        fileChooser1.setTitle("Save");
+        fileChooser1.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("All Files", "*.*"));
 
-        Text sample = new Text(sampleText);
-
-
-        Button btnSave = new Button("Save");
-
-        btnSave.setOnAction(event -&amp;amp;gt;  {
-            FileChooser fileChooser2 = new FileChooser();
-
-            //Set extension filter for text files
-            FileChooser2.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
-            fileChooser.getExtensionFilters().add(extFilter);
-
-            //Show save file dialog
-            File file = fileChooser.showSaveDialog(primaryStage);
-
-            if (file != null) {
-                saveTextToFile(sampleText, file);
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                //Opening a dialog box
+                fileChooser.showSaveDialog(primaryStage);
             }
         });
 
-     
-
-        VBox root = new VBox();
+            VBox root = new VBox();
         root.setPadding(new Insets(10));
         root.setSpacing(5);
 
-        root.getChildren().addAll(textArea, button1, button2);
+        root.getChildren().addAll(textArea, button1, button2, saveButton);
 
         Scene scene = new Scene(root, 400, 200);
 
