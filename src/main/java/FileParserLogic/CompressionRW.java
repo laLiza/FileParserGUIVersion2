@@ -1,4 +1,4 @@
-package com.example.fileparsergui;
+package FileParserLogic;
 
 import java.io.File;
 import java.io.FileInputStream;

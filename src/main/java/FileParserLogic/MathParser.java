@@ -1,4 +1,4 @@
-package com.example.fileparsergui;
+package FileParserLogic;
 
 import java.util.Objects;
 import java.util.regex.Matcher;

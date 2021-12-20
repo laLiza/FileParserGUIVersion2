@@ -1,4 +1,4 @@
-package com.example.fileparsergui;
+package FileParserLogic;
 
 public interface IFileEngine {
     public void readFile ( String fileInputPath) throws Exception;

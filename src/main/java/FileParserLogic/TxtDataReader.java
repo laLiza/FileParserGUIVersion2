@@ -1,4 +1,4 @@
-package com.example.fileparsergui;
+package FileParserLogic;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -44,8 +44,8 @@ public class TxtDataReader  {
         String textRes ="";
         while (line != null) {
 
-            fileWriter.writeLine(com.example.fileparsergui.MathParser.ParseString(line));
-            textRes += (com.example.fileparsergui.MathParser.ParseString(line)+"\n");
+            fileWriter.writeLine(MathParser.ParseString(line));
+            textRes += (MathParser.ParseString(line)+"\n");
 
 
             line = br.readLine();

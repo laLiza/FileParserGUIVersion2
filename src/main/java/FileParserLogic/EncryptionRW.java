@@ -1,4 +1,4 @@
-package com.example.fileparsergui;
+package FileParserLogic;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;

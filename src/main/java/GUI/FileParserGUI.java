@@ -1,5 +1,4 @@
-
-package com.example.fileparsergui;
+package GUI;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -27,7 +26,7 @@ import java.util.logging.Logger;
 
 
 
-public class HelloApplication extends Application {
+public class FileParserGUI extends Application {
 
     private Desktop desktop = Desktop.getDesktop();
 
@@ -96,7 +95,7 @@ public class HelloApplication extends Application {
             writer.println(content);
             writer.close();
         } catch (IOException ex) {
-            Logger.getLogger(HelloApplication.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileParserGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     private void printLog(TextArea textArea, List<File> files) {
@@ -109,7 +108,7 @@ public class HelloApplication extends Application {
     }
 
     private void openFile(File file) throws Exception {
-            com.example.fileparsergui.FileEngine FEnginer = new com.example.fileparsergui.FileEngine();
+            FileEngine FEnginer = new FileEngine();
             FEnginer.FolderControl();
             FEnginer.ProcessFile(file.getAbsolutePath());
 

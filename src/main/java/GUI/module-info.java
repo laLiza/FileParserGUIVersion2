@@ -5,6 +5,6 @@ module com.example.fileparsergui {
     requires java.logging;
 
 
-    opens com.example.fileparsergui to javafx.fxml;
-    exports com.example.fileparsergui;
+    opens com.fileparsergui to javafx.fxml;
+    exports com.fileparsergui;
 }
