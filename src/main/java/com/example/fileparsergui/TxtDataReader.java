@@ -54,6 +54,8 @@ public class TxtDataReader  {
         fileWriter.closeFile();
         br.close();
         System.out.println(textRes);
+
+
     }
 
 }
